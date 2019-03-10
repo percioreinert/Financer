@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Login</title>
+
+    <link rel="stylesheet" th:href="@{css/bootstrap.min.css}"/>
+
+    <style type="text/css">
+        @font-face {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body {
+            font-family: "Open Sans", sans-serif;
+        }
+
+        .secondary-container {
+            width: 100%;
+            max-width: 420px;
+            margin: auto;
+        }
+
+        .label-text {
+            font-weight: bold;
+        }
+
+        .logo-box {
+            margin: auto;
+            padding: 5px;
+            max-width: 125px;
+            border: 2px solid #4e555b;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">LOGOS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">About</a>
+                <a class="nav-item nav-link" href="#">Features</a>
+                <a class="nav-item nav-link" href="#">Pricing</a>
+                <a class="nav-item nav-link justify-content-end text-uppercase" th:href="@{__${T(br.pucrs.financer.util.Mappings).LOGOUT}__}">Sair</a>            </div>
+
+        </div>
+    </nav>
+
+    <br/>
+    <br/>
+
+    <div class="container">
+        <div class="secondary-container">
+            <div class="logo-box">
+                <h1 class="text-center ">LGS</h1>
+                <h4 class="text-center">Logos</h4>
+            </div>
+            <br/>
+            <br/>
+
+            <form action="#" th:action="@{__${T(br.pucrs.financer.util.Mappings).LOGIN}__}" method="POST">
+
+                <div class="form-group">
+                    <label for="username" class="label-text">Usuário</label>
+                    <input id="username" type="text" name="username" placeholder="exemplo@mail.com"
+                           class="form-control"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="label-text">Senha</label>
+                    <input id="password" type="password" name="password" placeholder="senha"
+                           class="form-control"/>
+                </div>
+
+                <br/>
+
+                <button type="submit" class="btn btn-lg btn-primary btn-block">Entrar</button>
+
+            </form>
+
+            <br/>
+
+            <form action="#" th:action="@{__${T(br.pucrs.financer.util.Mappings).REGISTER}__}" method="get">
+                <button type="submit" class="btn btn-lg btn-secondary btn-block">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Items List</title>
+
+    <link rel="stylesheet" th:href="@{css/bootstrap.min.css}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <style>
+        td {
+            text-align: right;
+            font-size: 18px;
+        }
+         th {
+             text-align: center;
+             font-size: 18px;
+         }
+    </style>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">LOGOS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">About</a>
+                <a class="nav-item nav-link" href="#">Features</a>
+                <a class="nav-item nav-link" href="#">Pricing</a>
+                <a class="nav-item nav-link text-right text-uppercase" th:href="@{__${T(br.pucrs.financer.util.Mappings).LOGOUT}__}">Sair</a>            </div>
+        </div>
+    </nav>
+
+    <br/>
+    <br/>
+
+    <div class="container-fluid">
+
+        <h1 class="text-center">Lista de itens</h1>
+        <br/>
+        <br/>
+
+        <div>
+            <h3>Adicionar um novo item
+                <a href="#">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </a></h3>
+        </div>
+
+        <table class="table table-bordered table-hover table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>NOME</th>
+                    <th>DIA/P</th>
+                    <th>JAN</th>
+                    <th>FEV</th>
+                    <th>MAR</th>
+                    <th>ABR</th>
+                    <th>MAI</th>
+                    <th>JUN</th>
+                    <th>JUL</th>
+                    <th>AGO</th>
+                    <th>SET</th>
+                    <th>OUT</th>
+                    <th>NOV</th>
+                    <th>DEZ</th>
+                    <th>TOTAL</th>
+                    <th>MÉDIA</th>
+                    <th>/</th>
+                </tr>
+            </thead>
+            <tr>
+                <th>Exemplo de item</th>
+                <th>7</th>
+                <td>1.255,00</td>
+                <td>523,00</td>
+                <td>878,68</td>
+                <td>5.023,22</td>
+                <td>1.269,99</td>
+                <td>106,89</td>
+                <td>10,25</td>
+                <td>3.250,58</td>
+                <td>1.213,66</td>
+                <td>2.154,23</td>
+                <td>4.521,02</td>
+                <td>1.523,33</td>
+                <td>15.325,33</td>
+                <td>1.254,33</td>
+                <td align="center"><a href="#" th:href="@{__${T(br.pucrs.financer.util.Mappings).REMOVE_ITEM}__}">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </a></td>
+            </tr>
+        </table>
+
+    </div>
+
+</body>
+</html>

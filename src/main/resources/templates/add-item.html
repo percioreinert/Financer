@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Item</title>
+
+    <link rel="stylesheet" th:href="@{css/bootstrap.min.css}"/>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Adicionar um novo item:</h1>
+
+        <form th:action="@{__${T(br.pucrs.financer.util.Mappings).ADD_ITEM}__}" method="POST">
+            <div>
+                <label>Nome:</label>
+                <input/>
+            </div>
+            <div>
+                <label>Valor</label>
+                <input/>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
